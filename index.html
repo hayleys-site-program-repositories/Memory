@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<!--  ---------------------------------------------------------------------------  -->  
+  
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title> Made by Hayley Simmons </title>
+    
+    <!-- script file -->
+    <script src="/script.js" defer> </script>
+    
+    <!-- css file -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- font imports -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+    </style>
+    
+  </head>
+
+<!--  ---------------------------------------------------------------------------  -->  
+  
+  <body>
+    
+    <h1> <i> Memory </i> </h1>
+    
+    <p id="instructions"> Memorize the pattern, and repeat it back exactly. Each round will be progressively faster.
+      <br> Press Start when you're ready. </p>
+      
+    <h2 id="instructions2">
+        You have 3 chances. </h2>
+    
+<!--  ---------------------------------------------------------------------------  -->    
+    
+    <div class="button-container1">
+      
+      <button id="startBtn" onclick="startGame()"> 
+        Start 
+      </button>
+      
+      <button id="stopBtn" onclick="stopGame()" hidden> 
+        Stop 
+      </button>
+      
+    </div>
+    
+<!--  ---------------------------------------------------------------------------  -->   
+    
+    <h3 id="mistakeArea" hidden>
+      Mistakes made: <span id="mistakesMade"></span>
+      <br> Chances left: <span id="chancesLeft"></span> </h3>
+    
+<!--  ---------------------------------------------------------------------------  --> 
+    
+    <div id="gameButtonArea" class="button-container2" hidden>
+      
+      <button id="button1" value="transparent_moon.jpg"
+        onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()">
+        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_moon.png?v=1648575475775"
+            alt="Moon">
+      </button>
+      
+      <button id="button2" value="transparent_saturn.png"
+        onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()">
+        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_saturn.png?v=1648498443260"
+             alt="Saturn">
+      </button>
+      
+      <button id="button3" value="transparent_milky_way.png"
+        onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()">
+        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_milky_way.png?v=1648498260119"
+             alt="Milky_Way">
+      </button>
+      
+      <button id="button4" value="transparent_jupiter.png"
+        onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()">
+        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_jupiter.png?v=1648498816871"
+             alt="Jupiter">
+      </button>
+      
+      <button id="button5" value="transparent_neptune.png"
+        onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()">
+        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_neptune.png?v=1648498276006"
+             alt="Neptune">
+      </button>
+      
+      <button id="button6" value="transparent_earth.png"
+        onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()">
+        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_earth.png?v=1648498829374"
+             alt="Earth">
+      </button>
+      
+    </div>
+      
+    
+  </body>
+  
+</html>
