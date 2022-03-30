@@ -1,0 +1,249 @@
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.hidden {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+/* title */
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 60px;
+  background: transparent;
+  text-shadow: 0 10px 10px #ffffff;
+}
+
+/* subtitle */
+h2 {
+  color: white;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 18px;
+  background: transparent;
+  text-shadow: 0 5px 10px #ffffff;
+}
+
+/* mistake area */
+h3 {
+  color: white;
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
+  font-size: 15px;
+  background: transparent;
+  text-shadow: 0 5px 20px #ffffff;
+}
+
+/* instructions */
+p {
+  color: white;
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
+  font-size: 14px;
+  backdrop-filter: blur(1px);
+  text-shadow: 0 5px 20px #ffffff;
+}
+
+
+body {
+  margin: 10px;
+  font-family: sans-serif;
+  line-height: 1.2;
+  background-image: url(https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/starry_night.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+button {
+  padding: 10px 20px;
+  font-family: Georgia, serif;
+}
+
+.button-container1 {
+  text-align: center;
+  margin: 20px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#startBtn {
+  background: black;
+  border-radius: 5px;
+  font-family: 'Cutive Mono', monospace;
+  color: white;
+  border-width: 4px;
+  border-color: #1a1a1a;
+}
+
+#startBtn:hover {
+  background: #333333;
+  box-shadow: 0 5px 15px #ffffff;
+  color: white;
+  transition: all 0.2s ease-in-out;
+} 
+
+#startBtn:active {
+  background: #4d4d4d;
+  box-shadow: 0 5px 15px #66ff33;
+  color: grey;
+  transform: translateY(5px);
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#stopBtn {
+  background: black;
+  border-radius: 5px;
+  font-family: 'Cutive Mono', monospace;
+  color: white;
+  border-width: 4px;
+  border-color: #1a1a1a;
+}
+
+#stopBtn:hover {
+  background: #333333;
+  box-shadow: 0 5px 15px #ffffff; 
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+#stopBtn:active {
+  background: #4d4d4d;
+  box-shadow: 0 5px 15px #990000; 
+  color: grey;
+  transform: translateY(5px);
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#gameButtonArea > button {
+  width: 150px;
+  height: 150px;
+  margin: 8px;
+  border-radius: 100px;
+}
+
+.button-container2 {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#button1 {
+  background: transparent;
+  border: none;
+}
+
+#button1:hover, #button1:active, #button1.lit {
+  box-shadow: 0 10px 30px #ffffff;
+  transform: translateY(5px);
+}
+
+#button1.disabled {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#button2 {
+  background: transparent;
+  border: none;
+}
+
+#button2:hover, #button2:active, #button2.lit {
+  box-shadow: 0 10px 30px #ffffff;
+  transform: translateY(5px);
+}
+
+#button2.disabled {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#button3 {
+  background: transparent;
+  border: none;
+}
+
+#button3:hover, #button3:active, #button3.lit {
+  box-shadow: 0 10px 30px #ffffff;
+  transform: translateY(5px);
+}
+
+#button3.disabled {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#button4 {
+  background: transparent;
+  border: none;
+}
+
+#button4:hover, #button4:active, #button4.lit {
+  box-shadow: 0 10px 30px #ffffff;  
+  transform: translateY(5px);
+}
+
+#button4.disabled {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#button5 {
+  background: transparent;
+  border: none
+}
+
+#button5:hover, #button5:active, #button5.lit {
+  box-shadow: 0 10px 30px #ffffff;
+  transform: translateY(5px);
+}
+
+#button5.disabled {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+#button6 {
+  background: transparent;
+  border: none;
+}
+
+#button6:hover, #button6:active, #button6.lit {
+  box-shadow: 0 10px 30px #ffffff;
+  transform: translateY(5px);
+}
+
+#button6.disabled {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
