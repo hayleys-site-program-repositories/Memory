@@ -37,54 +37,48 @@ The following **additional** features are implemented:
 
 - [Y] List anything else that you can get done to improve the app!
 
-~ While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
+	~ While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
 
 
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-![Y]  winning gif: [https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif]
+	![Y]  winning gif: [https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif]
 
-![Y] losing gif: [https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif]
+	![Y] losing gif: [https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif]
 
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
-~ A professor of mine (thank you Dr. Edwards!)
-~ CodePath TA, Anitya Gupta
+	~ A professor of mine (thank you Dr. Edwards!)
+	~ CodePath TA, Anitya Gupta
 
-~ https://www.javatpoint.com/how-to-center-a-button-in-css
-~ https://www.w3schools.com/cssref/
-~ https://www.w3schools.com/jsref/jsref_random.asp
-~ https://www.w3schools.com/jsref/met_win_settimeout.asp
+	~ https://www.javatpoint.com/how-to-center-a-button-in-css
+	~ https://www.w3schools.com/cssref/
+	~ https://www.w3schools.com/jsref/jsref_random.asp
+	~ https://www.w3schools.com/jsref/met_win_settimeout.asp
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
-1) My first challenge was recreating the guess function to include user mistakes. I wanted the function to replay the sequence after the user makes a mistake, add to/subtract from the mistake counters, & when the user made their 3rd mistake it was immediate game over.  What ended up happening, however, was that once the user reached 3 mistakes the clue sequence still replayed. It was only after the user clicked a button, right or wrong, that the game ended. The problem was the order of my if-statements. My professor helped me in realizing this mistake.
-
- 	I solved this problem by first turning the if-statement for checking incorrect buttons into a nested if-statement. The nested if-statement then checked if the user had 3 mistakes, only playing the sequence if it was false. The rest of the code for checking correct buttons was made into an if-else statement.
+	~ My first challenge was recreating the guess function to include user mistakes. I wanted the function to replay the sequence after the user makes a mistake, add to/subtract from the mistake counters, & when the user made their 3rd mistake it was immediate game over.  What ended up happening, however, was that once the user reached 3 mistakes the clue sequence still replayed. It was only after the user clicked a button, right or wrong, that the game ended. The problem was the order of my if-statements. My professor helped me in realizing this mistake. I solved this problem by first turning the if-statement for checking incorrect buttons into a nested if-statement. The nested if-statement then checked if the user had 3 mistakes, only playing the sequence if it was false. The rest of the code for checking correct buttons was made into an if-else statement.
 	
-2) My second challenge was disabling the buttons during the clue sequence to prevent users clicking them. I had trouble figuring out where to specifically put the code; I thought simply saying in the guess function that if the clue sequence was playing, set “button.disabled” to true, & if it was not playing then set “button.disabled” to false. But it was a little more complicated than that. I had help from a CodePath TA & a fellow SITE applicant who also tackled this problem.
-
-	I solved this problem by approaching it similarly to adding the “lit” class: creating two functions, one for enabling (enableButtons) & one for disabling (disableButtons). I then had to place them in the playClueSequence function. My next minor issue from here was that I was supposed to setTimeout the enableButtons function, rather than the disableButtons function. When I tried to setTimeout the disableButtons function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
+	~ My second challenge was disabling the buttons during the clue sequence to prevent users clicking them. I had trouble figuring out where to specifically put the code; I thought simply saying in the guess function that if the clue sequence was playing, set “button.disabled” to true, & if it was not playing then set “button.disabled” to false. But it was a little more complicated than that. I had help from a CodePath TA & a fellow SITE applicant who also tackled this problem. I solved this problem by approaching it similarly to adding the “lit” class: creating two functions, one for enabling (enableButtons) & one for disabling (disableButtons). I then had to place them in the playClueSequence function. My next minor issue from here was that I was supposed to setTimeout the enableButtons function, rather than the disableButtons function. When I tried to setTimeout the disableButtons function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
 	
-3) My third challenge was that I had an unexpected, but minor, bug come up. The button tone would keep playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more.
-
- 	For the sake of time, I unfortunately did not fix this problem. I pray no one accidentally drags it.  
+	~ My third challenge was that I had an unexpected, but minor, bug come up. The button tone would keep playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more. For the sake of time, I unfortunately did not fix this problem. I pray no one accidentally drags it.  
 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words)
 
-1) My first question about web development would be on how to start a portfolio. I would like to know how one goes about starting new projects, the types of projects, etc. And what are good, preferably free, websites to host said portfolios. 
+	~ My first question about web development would be on how to start a portfolio. I would like to know how one goes about starting new projects, the types of projects, etc. And what are good, preferably free, websites to host said portfolios. 
 
-2) My second question is what careers in web development would look like when “create-it-yourself” websites are becoming more readily available. If someone would like to be a freelance web developer, then I would like to know how to make yourself more competitive against said websites.
+	~ My second question is what careers in web development would look like when “create-it-yourself” websites are becoming more readily available. If someone would like to be a freelance web developer, then I would like to know how to make yourself more competitive against said websites.
 
-3) My third question is on how to write better code. Specifically, I would like to know ways to avoid hard-coding solutions. I know that brittle code is not necessarily bad, however it is a struggle to deal with when trying not to break something dealing with something else.
+	~ My third question is on how to write better code. Specifically, I would like to know ways to avoid hard-coding solutions. I know that brittle code is not necessarily bad, however it is a struggle to deal with when trying not to break something dealing with something else.
 
-4) And my fourth question is about why I had to setTimeout the "enableButtons" function instead of the "disableButtons." It only halfway makes sense: disabling, then enabling them after a certain amount of time. But I don't fully understand why you couldn't do the opposite: having them enabled, then disabling them for a set amount of time. 
+	~ And my fourth question is about why I had to setTimeout the "enableButtons" function instead of the "disableButtons." It only halfway makes sense: disabling, then enabling them after a certain amount of time. But I don't fully understand why you couldn't do the opposite: having them enabled, then disabling them for a set amount of time. 
 
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
