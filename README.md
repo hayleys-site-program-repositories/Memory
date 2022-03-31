@@ -43,8 +43,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-	![Y] https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif
-	![Y] https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif
+
+![Y]  winning gif: [https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif]
+![Y] losing gif: [https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif]
 
 
 ## Reflection Questions
