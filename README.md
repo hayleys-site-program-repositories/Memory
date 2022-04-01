@@ -44,9 +44,9 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-	![Y]  winning gif: [https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif]
+~ [winning gif](https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif)
 
-	![Y] losing gif: [https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif]
+~ [losing gif](https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif)
 
 
 ## Reflection Questions
@@ -55,10 +55,10 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 	~ A professor of mine (thank you Dr. Edwards!)
 	~ CodePath TA, Anitya Gupta
 
-	~ https://www.javatpoint.com/how-to-center-a-button-in-css
-	~ https://www.w3schools.com/cssref/
-	~ https://www.w3schools.com/jsref/jsref_random.asp
-	~ https://www.w3schools.com/jsref/met_win_settimeout.asp
+	~ [How to center a button in CSS](https://www.javatpoint.com/how-to-center-a-button-in-css)
+	~ [CSS references](https://www.w3schools.com/cssref/)
+	~ [Random in Javascript](https://www.w3schools.com/jsref/jsref_random.asp)
+	~ [Settimeout in Javascript](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 
 
 
@@ -97,7 +97,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](https://drive.google.com/file/d/1YBzEBfM_VDKbbg0H2JZC5riOZbsT-8Dm/view?usp=sharing)
+~ [My 5-minute Interview Recording](https://drive.google.com/file/d/1YBzEBfM_VDKbbg0H2JZC5riOZbsT-8Dm/view?usp=sharing)
 
 
 ## License
