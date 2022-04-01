@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 - [Y] List anything else that you can get done to improve the app!
 
-	~ While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
+	~ (If this counts as a feature) While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
 
 
 ## Video Walkthrough (GIF)
@@ -52,23 +52,26 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
-	~ A professor of mine (thank you Dr. Edwards!)
+	~ My professor (thank you Dr. Edwards!)
 	~ CodePath TA, Anitya Gupta
+	~ Two SITE applicants, Angel Garcia & Joseph Harrel
 
 	~ [How to center a button in CSS](https://www.javatpoint.com/how-to-center-a-button-in-css)
-	~ [CSS references](https://www.w3schools.com/cssref/)
-	~ [Random in Javascript](https://www.w3schools.com/jsref/jsref_random.asp)
-	~ [Settimeout in Javascript](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+	~ [CSS References](https://www.w3schools.com/cssref/)
+	~ [Random in JavaScript](https://www.w3schools.com/jsref/jsref_random.asp)
+	~ [Settimeout in JavaScript](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+	~ [DragEvent in JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/DragEvent)
+	~ [MouseEvents in JavaScript](https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/#:~:text=%20Introduction%20to%20JavaScript%20mouse%20events%20%201,move%20the%20mouse%20cursor%20around%20an...%20More%20)
 
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
-	~ My first challenge was recreating the guess function to include user mistakes. I wanted the function to replay the sequence after the user makes a mistake, add to/subtract from the mistake counters, & when the user made their 3rd mistake it was immediate game over.  What ended up happening, however, was that once the user reached 3 mistakes the clue sequence still replayed. It was only after the user clicked a button, right or wrong, that the game ended. The problem was the order of my if-statements. My professor helped me in realizing this mistake. I solved this problem by first turning the if-statement for checking incorrect buttons into a nested if-statement. The nested if-statement then checked if the user had 3 mistakes, only playing the sequence if it was false. The rest of the code for checking correct buttons was made into an if-else statement.
+	~ My first challenge was recreating the guess function to include user mistakes. I wanted the function to replay the sequence after the user makes a mistake, add to/subtract from the mistake counters, & when the user made their 3rd mistake it was immediate game over.  What ended up happening, however, was that once the user reached 3 mistakes the clue sequence still replayed. It was only after the user clicked a button, right or wrong, that the game ended. The problem was the order of my if-statements. My professor helped me in realizing this mistake. I solved this by first turning the if-statement for checking incorrect buttons into a nested if-statement. The nested if-statement then checked if the user had 3 mistakes, only playing the sequence if it was false. The rest of the code for checking correct buttons was made into an if-else statement.
 	
-	~ My second challenge was disabling the buttons during the clue sequence to prevent users clicking them. I had trouble figuring out where to specifically put the code; I thought simply saying in the guess function that if the clue sequence was playing, set “button.disabled” to true, & if it was not playing then set “button.disabled” to false. But it was a little more complicated than that. I had help from a CodePath TA & a fellow SITE applicant who also tackled this problem. I solved this problem by approaching it similarly to adding the “lit” class: creating two functions, one for enabling (enableButtons) & one for disabling (disableButtons). I then had to place them in the playClueSequence function. My next minor issue from here was that I was supposed to setTimeout the enableButtons function, rather than the disableButtons function. When I tried to setTimeout the disableButtons function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
+	~ My second challenge was disabling the buttons during the clue sequence to prevent users clicking them. I had trouble figuring out where to specifically put the code; I thought simply saying in the guess function that if the clue sequence was playing, set “button.disabled” to true, & if it was not playing then set “button.disabled” to false. But it was a little more complicated than that. I had help from a CodePath TA & a fellow SITE applicant who also tackled this problem. I solved this by approaching it similarly to adding the “lit” class: creating two functions, one for enabling (enableButtons()) & one for disabling (disableButtons()). I then had to place them in the playClueSequence function. My next minor issue from here was that I was supposed to setTimeout the enableButtons() function, rather than the disableButtons() function. When I tried to setTimeout() the disableButtons() function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
 	
-	~ My third challenge was that I had an unexpected, but minor, bug come up. The button tone would keep playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more. For the sake of time, I unfortunately did not fix this problem. I pray no one accidentally drags it.  
+	~ My last challenge was the button tone playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more. A fellow SITE applicant helped me in figuring out this problem. I solved it by simply adding a "onmousemove" event to each button, and calling stopTone() inside it.
 
 
 
@@ -80,19 +83,21 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 	~ My third question is on how to write better code. Specifically, I would like to know ways to avoid hard-coding solutions. I know that brittle code is not necessarily bad, however it is a struggle to deal with when trying not to break something dealing with something else.
 
-	~ And my fourth question is about why I had to setTimeout the "enableButtons" function instead of the "disableButtons." It only halfway makes sense: disabling, then enabling them after a certain amount of time. But I don't fully understand why you couldn't do the opposite: having them enabled, then disabling them for a set amount of time. 
+	~ And my fourth question is about why I had to setTimeout() the enableButtons() function instead of the disableButtons() function. It only halfway makes sense: disabling, then enabling them after a certain amount of time. But I don't fully understand why you couldn't do the opposite: having them enabled, then disabling them for a set amount of time. 
 
 
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-
-	~ If I had a few more hours to work on the project, I would start by changing the button tones to piano chords simply because it would sound much prettier. Adding a seperate sound and/or visual indicator to indicate a wrong answer would also be ideal. Since my game is space-themed, I would prefer to have 3 aliens (instead of Xs) indicate wrong answers. Each wrong answer would turn each alien white; it would be a blank outline otherwise.
 	
-	~ Next, I would tackle the slight problems of the pattern speeding up despite the user having made a wrong guess and it is merely repeating, and the button tones starting and not stopping when accidentally dragged.
+	~ I would change the button tones to piano chords simply because it would sound much prettier. I like the piano, that's all (no I can't play). 
 	
-	~ I would then implementing a timer feature to limit the amount of time a user has on guessing patterns. This would most definitely increase the difficulty of the game. It would then tie into creating different difficulty levels that the user can choose from. My ideal “Easy” mode would be to have 4 buttons, 3 chances, sequence length of 8 numbers, & 30 seconds per round. “Intermediate” mode would have 6 buttons, 2 chances, sequence length of 12 numbers, & 20 seconds per round. “Advanced” mode would have 8 buttons, 1 chance, sequence length of 16 numbers, & 10 seconds per round. 
+	~ Adding a seperate sound and/or visual indicator to indicate a wrong answer would be ideal. Since my game is space-themed, I imagine having 3 aliens (instead of Xs) indicating wrong answers. Each wrong answer would turn each alien white; it would be a blank outline otherwise.
 	
-	~ If I had more than a few hours, I would then like to implement a “high score” system in the game. There would be a database of high scores separated by difficulty level. When the user beats their high score in a game, it would congratulate them on the new high score & update the database. This could also tie into creating an “Endless” mode, where the pattern could continuously keep going (making the pattern length an absurd number like 1000). This mode would only time the rounds, maybe for 1 minute each, instead of going by mistakes. The user would just focus on beating their high score.
+	~ I would also like to optimize my enableButtons() and disableButtons() functions to loop through the div container holding the buttons, instead of calling each one seperately.
+	
+	~ I would implement a timer feature to limit the amount of time a user has on guessing patterns. This would most definitely increase the difficulty of the game. It would then tie into creating different difficulty levels that the user can choose from. My ideal “Easy” mode would be to have 4 buttons, 3 chances, sequence length of 8 numbers, & 45 seconds per round. “Intermediate” mode would have 6 buttons, 2 chances, sequence length of 12 numbers, & 30 seconds per round. “Advanced” mode would have 8 buttons, 1 chance, sequence length of 16 numbers, & 15 seconds per round. 
+	
+	~ If I had more than a few hours though, I would then like to implement a “high score” system in the game. There would be a database of high scores separated by difficulty level. When the user beats their high score in a game, it would congratulate them on the new high score & update the database. This could also tie into creating an “Endless” mode, where the pattern could continuously keep going (making the pattern length an absurd number like 1000). This mode would only time the rounds, maybe for 1 minute each, instead of going by mistakes. The user would just focus on beating their high score.
 
 
 ## Interview Recording URL Link
