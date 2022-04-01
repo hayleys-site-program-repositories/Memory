@@ -6,7 +6,7 @@ Submitted by: **Hayley Simmons**
 
 Time spent: **24** hours spent in total
 
-Links to project: (https://glitch.com/edit/#!/a-memory-game [code], https://a-memory-game.glitch.me [live site])
+Links to project: [Code](https://glitch.com/edit/#!/a-memory-game), [Live Site](https://a-memory-game.glitch.me)
 
 
 ## Required Functionality
