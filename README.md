@@ -44,9 +44,13 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-~ [winning gif](https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif)
+~ [Winning gif](https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif)
 
-~ [losing gif](https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif)
+~ [Losing gif](https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif)
+
+~ [Mistake Counter gif](https://media.giphy.com/media/lY7Aq4LEH5FaeGnvt5/giphy.gif)
+
+~ [Buttons Enabled & Disabled gif](https://media.giphy.com/media/OcXfxHIqvjov99j34G/giphy.gif)
 
 
 ## Reflection Questions
