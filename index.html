@@ -59,42 +59,54 @@
     
 <!--  ---------------------------------------------------------------------------  --> 
     
-    <div id="gameButtonArea" class="button-container2" hidden>
+    <div id="gameButtonArea" class="button-container2">
       
-      <button id="button1" value="transparent_moon.jpg"
-        onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()">
+      <!-- button 1 - Moon -->
+      <button id="button1" value="transparent_moon.jpg" draggable="false"
+        onclick="guess(1)" onmousedown="startTone(1)" onmousemove="stopTone()" onmouseup="stopTone()">
         <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_moon.png?v=1648575475775"
-            alt="Moon">
+            draggable="false" alt="Moon">     
+        <audio id="piano1" src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_1.mp3?v=1648874124231"></audio>
       </button>
       
-      <button id="button2" value="transparent_saturn.png"
-        onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()">
+      <!-- button 2 - Saturn -->
+      <button id="button2" value="transparent_saturn.png" draggable="false"
+        onclick="guess(2)" onmousedown="startTone(2)" onmousemove="stopTone()" onmouseup="stopTone()">
         <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_saturn.png?v=1648498443260"
-             alt="Saturn">
+             draggable="false" alt="Saturn">
+        <audio id="piano2" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_2.mp3?v=1648874128164"></audio>
       </button>
       
-      <button id="button3" value="transparent_milky_way.png"
-        onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()">
+      <!-- button 3 - Milky Way -->
+      <button id="button3" value="transparent_milky_way.png" draggable="false"
+        onclick="guess(3)" onmousedown="startTone(3)" onmousemove="stopTone()" onmouseup="stopTone()">
         <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_milky_way.png?v=1648498260119"
-             alt="Milky_Way">
+             draggable="false" alt="Milky_Way">
+        <audio id="piano3" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_3.mp3?v=1648874132877"></audio>
       </button>
       
-      <button id="button4" value="transparent_jupiter.png"
-        onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()">
+      <!-- button 4 - Jupiter -->
+      <button id="button4" value="transparent_jupiter.png" draggable="false"
+        onclick="guess(4)" onmousedown="startTone(4)" onmousemove="stopTone()" onmouseup="stopTone()">
         <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_jupiter.png?v=1648498816871"
-             alt="Jupiter">
+             draggable="false" alt="Jupiter">
+        <audio id="piano4" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_4.mp3?v=1648874136582"></audio>
       </button>
       
-      <button id="button5" value="transparent_neptune.png"
-        onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()">
+      <!-- button 5 - Neptune -->
+      <button id="button5" value="transparent_neptune.png" draggable="false"
+        onclick="guess(5)" onmousedown="startTone(5)" onmousemove="stopTone()" onmouseup="stopTone()" >
         <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_neptune.png?v=1648498276006"
-             alt="Neptune">
+             draggable="false" alt="Neptune">
+        <audio id="piano5" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_5.mp3?v=1648874139752"></audio>
       </button>
       
-      <button id="button6" value="transparent_earth.png"
-        onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()">
+      <!-- button 6 - Earth -->
+      <button id="button6" value="transparent_earth.png" draggable="false"
+        onclick="guess(6)" onmousedown="startTone(6)" onmousemove="stopTone()" onmouseup="stopTone()">
         <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_earth.png?v=1648498829374"
-             alt="Earth">
+             draggable="false" alt="Earth">
+        <audio id="piano6" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_6.mp3?v=1648874146731"></audio>
       </button>
       
     </div>
