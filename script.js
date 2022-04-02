@@ -171,15 +171,15 @@ function playClueSequence() {
   let delay = nextClueWaitTime
   
   for (let i = 0; i <= progress; i++) {
-    console.log("play single clue: " + pattern[i] + " in " + delay + " ms")
+    console.log("play single clue: " + pattern[i])
     
     setTimeout(playSingleClue, delay, pattern[i])
     
     delay += clueHoldTime 
     delay += cluePauseTime
     
-    // each round will be faster
-    clueHoldTime -= 5
+    // // each round will be faster
+    // clueHoldTime -= 3
   }
   
   setTimeout(enableButtons, delay)
@@ -241,6 +241,10 @@ function guess(btn) {
         else {
           // user input pattern correctly, move on to next sequence
           progress++
+          
+          // each round will be faster
+          clueHoldTime -= 3
+          
           playClueSequence()
         }
     } 
