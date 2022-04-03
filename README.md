@@ -93,7 +93,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 	
-	~ I would change the button tones to piano chords simply because it would sound much prettier. I like the piano, that's all (no I can't play). 
+	~ I would change the button tones to piano chords simply because it would sound much prettier. I like the piano, that's all (no I can't play haha). I added the audio tags to the buttons, but I couldn't figure out how to add them to the function in time.
 	
 	~ Adding a seperate sound and/or visual indicator to indicate a wrong answer would be ideal. Since my game is space-themed, I imagine having 3 aliens (instead of Xs) indicating wrong answers. Each wrong answer would turn each alien white; it would be a blank outline otherwise.
 	
