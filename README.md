@@ -22,7 +22,7 @@ The following **required** functionality is complete:
 * [Y] User loses the game after an incorrect guess
 
 The following **optional** features are implemented:
-`
+
 * [Y] Any HTML page elements (including game buttons) has been styled differently than in the tutorial
 * [Y] Buttons use a pitch (frequency) other than the ones in the tutorial
 * [Y] More than 4 functional game buttons
