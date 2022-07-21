@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang = "en">
   
 <!--  ---------------------------------------------------------------------------  -->  
   
   <head>
     
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset = "utf-8" />
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1" />
 
-    <title> Made by Hayley Simmons </title>
+    <title> Memory </title>
     
     <!-- script file -->
-    <script src="/script.js" defer> </script>
+    <script src = "/script.js" defer> </script>
     
     <!-- css file -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel = "stylesheet" href = "/style.css" />
     
     <!-- font imports -->
     <style>
@@ -30,85 +30,63 @@
   <body>
     
     <h1> <i> Memory </i> </h1>
-    
-    <p id="instructions"> Memorize the pattern, and repeat it back exactly. Each round will be progressively faster.
-      <br> Press Start when you're ready. </p>
-      
-    <h2 id="instructions2">
-        You have 3 chances. </h2>
+    <p id = "instructions"> 
+      Memorize the pattern, and repeat it back exactly. Each round will be progressively faster. <br> Press Start when you're ready.
+    </p>
+    <h2 id = "instructions2"> You have 3 chances. </h2>
     
 <!--  ---------------------------------------------------------------------------  -->    
     
-    <div class="button-container1">
-      
-      <button id="startBtn" onclick="startGame()"> 
-        Start 
-      </button>
-      
-      <button id="stopBtn" onclick="stopGame()" hidden> 
-        Stop 
-      </button>
-      
+    <div class = "button-container1">
+      <button id = "startBtn" onclick = "startGame()"> Start! </button>
+      <button id = "stopBtn" onclick = "stopGame()" hidden> Stop </button>
     </div>
     
 <!--  ---------------------------------------------------------------------------  -->   
     
-    <h3 id="mistakeArea" hidden>
-      Mistakes made: <span id="mistakesMade"></span>
-      <br> Chances left: <span id="chancesLeft"></span> </h3>
+    <h3 id = "mistakeArea" hidden>
+      Mistakes made: <span id = "mistakesMade"></span>
+      <br> Chances left: <span id = "chancesLeft"></span>
+    </h3>
     
 <!--  ---------------------------------------------------------------------------  --> 
     
-    <div id="gameButtonArea" class="button-container2" hidden>
-      
+    <div id = "gameButtonArea" class = "button-container2" hidden>
       <!-- button 1 - Moon -->
-      <button id="button1" value="transparent_moon.jpg" draggable="false"
-        onclick="guess(1)" onmousedown="startTone(1)" onmousemove="stopTone()" onmouseup="stopTone()">
-        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_moon.png?v=1648575475775"
-            draggable="false" alt="Moon">     
-        <audio id="piano1" src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_1.mp3?v=1648874124231"></audio>
+      <button id = "button1" value = "transparent_moon.jpg" draggable = "false" onclick = "guess(1)" onmousedown = "startTone(1)" onmousemove = "stopTone()" onmouseup = "stopTone()">
+        <img draggable = "false" alt = "Moon" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_moon.png?v=1648575475775">     
+        <audio id = "piano1" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_1.mp3?v=1648874124231"></audio>
       </button>
       
       <!-- button 2 - Saturn -->
-      <button id="button2" value="transparent_saturn.png" draggable="false"
-        onclick="guess(2)" onmousedown="startTone(2)" onmousemove="stopTone()" onmouseup="stopTone()">
-        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_saturn.png?v=1648498443260"
-             draggable="false" alt="Saturn">
-        <audio id="piano2" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_2.mp3?v=1648874128164"></audio>
+      <button id = "button2" value = "transparent_saturn.png" draggable = "false" onclick = "guess(2)" onmousedown = "startTone(2)" onmousemove = "stopTone()" onmouseup = "stopTone()">
+        <img draggable = "false" alt = "Saturn" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_saturn.png?v=1648498443260">
+        <audio id = "piano2" src = "https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_2.mp3?v=1648874128164"></audio>
       </button>
       
       <!-- button 3 - Milky Way -->
-      <button id="button3" value="transparent_milky_way.png" draggable="false"
-        onclick="guess(3)" onmousedown="startTone(3)" onmousemove="stopTone()" onmouseup="stopTone()">
-        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_milky_way.png?v=1648498260119"
-             draggable="false" alt="Milky_Way">
-        <audio id="piano3" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_3.mp3?v=1648874132877"></audio>
+      <button id = "button3" value = "transparent_milky_way.png" draggable = "false" onclick = "guess(3)" onmousedown = "startTone(3)" onmousemove = "stopTone()" onmouseup = "stopTone()">
+        <img draggable = "false" alt = "Milky_Way" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_milky_way.png?v=1648498260119">
+        <audio id = "piano3" src = "https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_3.mp3?v=1648874132877"></audio>
       </button>
       
       <!-- button 4 - Jupiter -->
-      <button id="button4" value="transparent_jupiter.png" draggable="false"
-        onclick="guess(4)" onmousedown="startTone(4)" onmousemove="stopTone()" onmouseup="stopTone()">
-        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_jupiter.png?v=1648498816871"
-             draggable="false" alt="Jupiter">
-        <audio id="piano4" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_4.mp3?v=1648874136582"></audio>
+      <button id = "button4" value = "transparent_jupiter.png" draggable = "false" onclick = "guess(4)" onmousedown = "startTone(4)" onmousemove = "stopTone()" onmouseup = "stopTone()">
+        <img draggable = "false" alt = "Jupiter" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_jupiter.png?v=1648498816871">
+        <audio id = "piano4" src = "https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_4.mp3?v=1648874136582"></audio>
       </button>
       
       <!-- button 5 - Neptune -->
-      <button id="button5" value="transparent_neptune.png" draggable="false"
-        onclick="guess(5)" onmousedown="startTone(5)" onmousemove="stopTone()" onmouseup="stopTone()" >
-        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_neptune.png?v=1648498276006"
-             draggable="false" alt="Neptune">
-        <audio id="piano5" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_5.mp3?v=1648874139752"></audio>
+      <button id = "button5" value = "transparent_neptune.png" draggable = "false" onclick = "guess(5)" onmousedown = "startTone(5)" onmousemove = "stopTone()" onmouseup = "stopTone()">
+        <img  draggable = "false" alt = "Neptune" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_neptune.png?v=1648498276006">
+        <audio id = "piano5" src = "https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_5.mp3?v=1648874139752"></audio>
       </button>
       
       <!-- button 6 - Earth -->
-      <button id="button6" value="transparent_earth.png" draggable="false"
-        onclick="guess(6)" onmousedown="startTone(6)" onmousemove="stopTone()" onmouseup="stopTone()">
-        <img src="https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_earth.png?v=1648498829374"
-             draggable="false" alt="Earth">
-        <audio id="piano6" src="https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_6.mp3?v=1648874146731"></audio>
+      <button id = "button6" value = "transparent_earth.png" draggable = "false" onclick = "guess(6)" onmousedown = "startTone(6)" onmousemove = "stopTone()" onmouseup = "stopTone()">
+        <img draggable = "false" alt = "Earth" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_earth.png?v=1648498829374">
+        <audio id = "piano6" src = "https://cdn.glitch.global/80400ab3-c1a8-4d54-9243-c5d1c10550d8/piano-effect_6.mp3?v=1648874146731"></audio>
       </button>
-      
     </div>
       
     
