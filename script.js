@@ -20,6 +20,19 @@ const pattern = []
 // pause time between clues in seconds
 const cluePauseTime = 300
 
+// Moon
+const button1 = document.getElementById("button1")
+// Saturn
+const button2 = document.getElementById("button2")
+// Milky Way
+const button3 = document.getElementById("button3")
+// Jupiter
+const button4 = document.getElementById("button4")
+// Neptune
+const button5 = document.getElementById("button5")
+// Earth
+const button6 = document.getElementById("button6")
+
 // button sound frequencies
 const freqMap = {
   1: 200,
@@ -32,19 +45,6 @@ const freqMap = {
 
 // --------------------------
 // global variables
-
-// 
-var button1 = document.getElementById("button1")
-// 
-var button2 = document.getElementById("button2")
-// 
-var button3 = document.getElementById("button3")
-// 
-var button4 = document.getElementById("button4")
-// 
-var button5 = document.getElementById("button5")
-// 
-var button6 = document.getElementById("button6")
 
 // length of playback between clues
 var nextClueWaitTime = 800
@@ -59,7 +59,7 @@ var guessCounter = 0
 // determines if user has pressed Start/Stop
 var gamePlaying = false
 
-// total mistakes user is allowed
+// total mistakes user has
 var mistakeTotal = 3
 // counts user's mistakes
 var mistakeCounter = 0
@@ -178,6 +178,7 @@ function enableButtons() {
 
 function playSingleClue(btn) {
   if (gamePlaying) {
+	// calls these functions:
     lightButton(btn)
     playTone(btn, clueHoldTime)
     setTimeout(clearButton, clueHoldTime, btn)
