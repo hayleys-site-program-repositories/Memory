@@ -37,20 +37,20 @@ The following **additional** features are implemented:
 
 - [Y] List anything else that you can get done to improve the app!
 
-	~ (If this counts as a feature) While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
+	~ While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
 
 
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-~ [Winning gif](https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif)
+~ [Winning](https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif)
 
-~ [Losing gif](https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif)
+~ [Losing](https://media.giphy.com/media/EaSAsnhHA1ywP0zfCx/giphy.gif)
 
-~ [Mistake Counter gif](https://media.giphy.com/media/lY7Aq4LEH5FaeGnvt5/giphy.gif)
+~ [Mistake Counter](https://media.giphy.com/media/lY7Aq4LEH5FaeGnvt5/giphy.gif)
 
-~ [Buttons Enabled & Disabled gif](https://media.giphy.com/media/OcXfxHIqvjov99j34G/giphy.gif)
+~ [Demonstrating Button Enabling/Disabling](https://media.giphy.com/media/OcXfxHIqvjov99j34G/giphy.gif)
 
 
 ## Reflection Questions
@@ -58,7 +58,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 	~ My professor (thank you Dr. Edwards!)
 	~ CodePath TA, Anitya Gupta
-	~ Two SITE applicants, Angel Garcia & Joseph Harrel
+	~ Two SITE applicants: Angel Garcia & Joseph Harrel
 
 	~ [How to center a button in CSS](https://www.javatpoint.com/how-to-center-a-button-in-css)
 	~ [CSS References](https://www.w3schools.com/cssref/)
