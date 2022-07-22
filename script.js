@@ -7,12 +7,13 @@ const gameButtons = document.getElementById("gameButtonArea")
 const Start = document.getElementById("startBtn")
 // stop button
 const Stop = document.getElementById("stopBtn")
-// div containing mistake counter & total
+// mistake counter
 const mistakeArea = document.getElementById("mistakeArea")
+// round counter
+const roundArea = document.getElementById("gameRound")
 // game instructions
 const instructions = document.getElementById("instructions")
-// mistake message
-const instructions2 = document.getElementById("instructions2")
+const instructions2 = document.getElementById("instructions-2")
 
 // empty array where random clue pattern will go
 const pattern = []
@@ -40,43 +41,49 @@ const freqMap = {
   3: 300,
   4: 350,
   5: 400,
-  6: 450
-}
+  6: 410
+};
 
 // --------------------------
 // global variables
 
-// length of playback between clues
+// length of playback between clues in seconds
 var nextClueWaitTime = 800
-// length of sound/light per clue
+// length of sound/light per clue in seconds
 var clueHoldTime = 800
 
-// how far along user is in pattern array; used for indexing pattern array
+// how far along user is in pattern; also indexes pattern array
 var progress = 0
-// where user is in guessing the clue sequence; resets per turn 
+// where user is in guessing the clue sequence; resets each round
 var guessCounter = 0
 
 // determines if user has pressed Start/Stop
 var gamePlaying = false
 
-// total mistakes user has
+// round number
+var roundCount = 1
+
+// total mistakes user has left
 var mistakeTotal = 3
-// counts user's mistakes
+// counter for mistakes made
 var mistakeCounter = 0
 
 // determines if tone is playing
 var tonePlaying = false
 // tone volume; must be between 0.0 - 1.0
-var volume = 1
+var volume = 0.5
+
+// -------------------------------------------------------------------
+// displays round number on page
+
+let round = roundCount
+document.getElementById("roundCount").innerHTML = roundCount
 
 // -------------------------------------------------------------------
 // displays user mistakes on page
 
-let displayMistakesMade = mistakeCounter
-document.getElementById("mistakesMade").innerHTML = displayMistakesMade
-
-let displayChancesLeft = mistakeTotal
-document.getElementById("chancesLeft").innerHTML = displayChancesLeft
+let chancesLeft = mistakeTotal
+document.getElementById("chancesLeft").innerHTML = chancesLeft
 
 // -------------------------------------------------------------------
 // generates random pattern of 12 nums. between 1-6 (since there's 6 buttons)
@@ -92,21 +99,22 @@ function randomPattern() {
 
 function startGame() {
   gamePlaying = true
-  
+
   // hides items
   Start.hidden = true
   instructions.hidden = true
   instructions2.hidden = true
-  
+
   // unhides items
   Stop.hidden = false
+  roundArea.hidden = false
   mistakeArea.hidden = false
   gameButtons.hidden = false
-  
-  // calls these functions:  
+
+  // calls these functions:
   enableButtons()
   randomPattern()
-  playClueSequence() 
+  playClueSequence()
 }
 
 // -------------------------------------------------------------------
@@ -114,21 +122,22 @@ function startGame() {
 
 function stopGame() {
   gamePlaying = false
-  
+
   // unhides items
   Start.hidden = false
   instructions.hidden = false
   instructions2.hidden = false
-  
+
   // hides items
   Stop.hidden = true
+  roundArea.hidden = true
   mistakeArea.hidden = true
   gameButtons.hidden = true
-  
+
   // resets these variables:
   pattern = []
+  roundCount = 1
   mistakeTotal = 3
-  mistakeCounter = 0
   progress = 0
 }
 
@@ -172,13 +181,11 @@ function enableButtons() {
   button6.classList.remove("disabled")
 }
 
-
 // -------------------------------------------------------------------
 // plays a single clue
 
 function playSingleClue(btn) {
   if (gamePlaying) {
-	// calls these functions:
     lightButton(btn)
     playTone(btn, clueHoldTime)
     setTimeout(clearButton, clueHoldTime, btn)
@@ -196,17 +203,15 @@ function playClueSequence() {
   guessCounter = 0
   
   context.resume()
-  
+
   let delay = nextClueWaitTime
-  
   for (let i = 0; i <= progress; i++) {
     // console.log("play single clue: " + pattern[i])
     setTimeout(playSingleClue, delay, pattern[i])
-    
-    delay += clueHoldTime 
+
+    delay += clueHoldTime
     delay += cluePauseTime
   }
-  
   // enables the buttons when sequence is finished
   setTimeout(enableButtons, delay)
 }
@@ -215,16 +220,16 @@ function playClueSequence() {
 // losing message, stops game
 
 function loseGame() {
-  stopGame()
   alert("You lose. Sorry!")
+  stopGame()
 }
 
 // -------------------------------------------------------------------
 // winning message, stops game
 
 function winGame() {
-  stopGame()
   alert("You win! Good memory.")
+  stopGame()
 }
 
 // -------------------------------------------------------------------
@@ -240,81 +245,80 @@ function guess(btn) {
 
   // user makes a mistake
   if (pattern[guessCounter] != btn) {
-    // decreases mistake total
-    mistakeTotal -= 1
-    // increases mistake counter
     mistakeCounter += 1
-    // displays updated values on page
-    document.getElementById("mistakesMade").innerHTML = mistakeCounter
-    document.getElementById("chancesLeft").innerHTML = mistakeTotal
+    chancesLeft -= 1
+    document.getElementById("chancesLeft").innerHTML = chancesLeft
 
-      // user out of chances, game over
-      if (mistakeCounter == 3 && mistakeTotal == 0) {
-        loseGame()
-      } else {
-          // repeats the same sequence
-          playClueSequence()
-        }
-  }
-
-  else if (pattern[guessCounter] == btn) {
-    // if user guessed correctly
+    // user out of chances, game over
+    if (chancesLeft == 0 && mistakeCounter == 3) {
+      loseGame()
+    } else {
+      // repeat the same sequence
+      playClueSequence()
+    }
+    
+  // user guessed correctly
+  } else if (pattern[guessCounter] == btn) {
     if (guessCounter == progress) {
+      
       // if it's the last turn
       if (progress == pattern.length - 1) {
         winGame()
       } else {
-          // user input pattern correctly, move on to next sequence
-          progress++
-          // each round will be faster
-          clueHoldTime -= 3
-          // plays the next sequence
-          playClueSequence()
-        }
-    } else {
-        // user continues guessing
-        guessCounter++
+        // move on to next sequence
+        progress++
+        
+        round += 1
+        document.getElementById("roundCount").innerHTML = round
+        
+        // decreases clue length so each round will be faster
+        clueHoldTime -= 3.5
+        
+        playClueSequence()
       }
+    } else {
+      // user continues guessing
+      guessCounter++
+    }
   }
-  
 }
 
 // -------------------------------------------------------------------
 // plays/stops tones (provided from CodePath; no touching)
 
-function playTone(btn, len) { 
-  o.frequency.value = freqMap[btn]
-  g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025)
-  context.resume()
-  tonePlaying = true
-  setTimeout(function() {
-    stopTone()
-  },len)
+function playTone(btn, len) {
+  o.frequency.value = freqMap[btn];
+  g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
+  context.resume();
+  tonePlaying = true;
+  setTimeout(function () {
+    stopTone();
+  }, len);
 }
 
-function startTone(btn) { 
+function startTone(btn) {
   if (!tonePlaying) {
-    context.resume()
-    o.frequency.value = freqMap[btn]
-    g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
-    context.resume()
-    tonePlaying = true
+    context.resume();
+    o.frequency.value = freqMap[btn];
+    g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
+    context.resume();
+    tonePlaying = true;
   }
 }
 
 function stopTone() {
-  g.gain.setTargetAtTime(0, context.currentTime + 0.05, 0.025)
-  tonePlaying = false
+  g.gain.setTargetAtTime(0, context.currentTime + 0.05, 0.025);
+  tonePlaying = false;
 }
 
-var AudioContext = window.AudioContext || window.webkitAudioContext 
-var context = new AudioContext()
-var o = context.createOscillator()
-var g = context.createGain()
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var context = new AudioContext();
+var o = context.createOscillator();
+var g = context.createGain();
 
-g.connect(context.destination)
-g.gain.setValueAtTime(0, context.currentTime)
-o.connect(g)
-o.start(0)
+g.connect(context.destination);
+g.gain.setValueAtTime(0, context.currentTime);
+o.connect(g);
+o.start(0);
 
 // -------------------------------------------------------------------

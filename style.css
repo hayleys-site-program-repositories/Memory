@@ -53,7 +53,7 @@ p {
   color: white;
   font-family: 'Cutive Mono', monospace;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   backdrop-filter: blur(1px);
   text-shadow: 0 5px 20px #ffffff;
 }
@@ -75,7 +75,7 @@ button {
   font-family: Georgia, serif;
 }
 
-.button-container1 {
+.start-stop-btn-container {
   text-align: center;
   margin: 20px;
 }
@@ -139,7 +139,7 @@ button {
   border-radius: 100px;
 }
 
-.button-container2 {
+.game-btn-container {
   text-align: center;
 }
 

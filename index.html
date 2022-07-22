@@ -31,27 +31,32 @@
     
     <h1> <i> Memory </i> </h1>
     <p id = "instructions"> 
-      Memorize the pattern, and repeat it back exactly. Each round will be progressively faster. <br> Press Start when you're ready.
+      Test your memory by guessing the correct pattern. <br> There are 12 rounds total - each round will be progressively faster. <br> You have 3 chances.
     </p>
-    <h2 id = "instructions2"> You have 3 chances. </h2>
+    <h2 id = "instructions-2"> Press Start to begin. </h2>
     
 <!--  ---------------------------------------------------------------------------  -->    
     
-    <div class = "button-container1">
+    <div class = "start-stop-btn-container">
       <button id = "startBtn" onclick = "startGame()"> Start! </button>
       <button id = "stopBtn" onclick = "stopGame()" hidden> Stop </button>
     </div>
     
-<!--  ---------------------------------------------------------------------------  -->   
+<!--  ---------------------------------------------------------------------------  -->
+    
+    <h3 id = "gameRound" hidden>
+      Round <span id = "roundCount"></span>
+    </h3>
+    
+<!--  ---------------------------------------------------------------------------  -->
     
     <h3 id = "mistakeArea" hidden>
-      Mistakes made: <span id = "mistakesMade"></span>
-      <br> Chances left: <span id = "chancesLeft"></span>
+      Chances left: <span id = "chancesLeft"></span>
     </h3>
     
 <!--  ---------------------------------------------------------------------------  --> 
     
-    <div id = "gameButtonArea" class = "button-container2" hidden>
+    <div id = "gameButtonArea" class = "game-btn-container" hidden>
       <!-- button 1 - Moon -->
       <button id = "button1" value = "transparent_moon.jpg" draggable = "false" onclick = "guess(1)" onmousedown = "startTone(1)" onmousemove = "stopTone()" onmouseup = "stopTone()">
         <img draggable = "false" alt = "Moon" src = "https://cdn.glitch.me/80400ab3-c1a8-4d54-9243-c5d1c10550d8/transparent_moon.png?v=1648575475775">     
