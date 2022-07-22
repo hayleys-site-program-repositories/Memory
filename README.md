@@ -37,7 +37,6 @@ The following **additional** features are implemented:
 
 * [x] While the clue sequence is actively playing, the buttons are disabled from user clicks. When the sequence is finished, buttons are enabled for guessing again.
 
-
 ## Video Walkthroughs (GIF)
 
 * [Winning](https://media.giphy.com/media/bcbwLQxFSdW1OGwZoV/giphy.gif)
@@ -47,7 +46,6 @@ The following **additional** features are implemented:
 * [Mistake Counter](https://media.giphy.com/media/lY7Aq4LEH5FaeGnvt5/giphy.gif)
 
 * [Demonstrating Button Enabling/Disabling](https://media.giphy.com/media/OcXfxHIqvjov99j34G/giphy.gif)
-
 
 ## Reflection Questions
 1.   If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
