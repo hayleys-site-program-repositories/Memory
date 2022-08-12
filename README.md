@@ -57,7 +57,7 @@ The following **additional** features are implemented:
 	* [How to center a button in CSS](https://www.javatpoint.com/how-to-center-a-button-in-css)
 	* [CSS References](https://www.w3schools.com/cssref/)
 	* [Random in JavaScript](https://www.w3schools.com/jsref/jsref_random.asp)
-	* [Settimeout in JavaScript](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+	* [setTimeout in JavaScript](https://www.w3schools.com/jsref/met_win_settimeout.asp)
 	* [DragEvent in JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/DragEvent)
 	* [MouseEvents in JavaScript](https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/#:~:text=%20Introduction%20to%20JavaScript%20mouse%20events%20%201,move%20the%20mouse%20cursor%20around%20an...%20More%20)
 -----------------
