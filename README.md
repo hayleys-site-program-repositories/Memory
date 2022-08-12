@@ -72,7 +72,7 @@ The following **additional** features are implemented:
 		* My next minor issue from here was that I was supposed to setTimeout the enableButtons function, rather than the disableButtons function. When I tried to setTimeout the disableButtons function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
 
 * My last challenge was the button tone playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more.
-	* I solved this by adding an onMouseDrag event to all the buttons, & calling the stopTone function on each one.
+	* I solved this by adding an onMouseMove event to all the buttons, & calling the stopTone function on each one. I also set the "draggable" attribute to false, for good measure.
 -----------------
 
 3.   What questions about web development do you have after completing your submission? (recommended 100 - 300 words)
