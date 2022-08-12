@@ -68,9 +68,11 @@ The following **additional** features are implemented:
 	* My professor helped me in realizing this mistake; I solved this by first turning the if-statement for checking incorrect buttons into a nested if-statement. The nested if-statement then checked if the user had 3 mistakes, only playing the sequence if it was false. The rest of the code for checking correct buttons was made into an if-else statement.
 
 * My second challenge was disabling the buttons during the clue sequence to prevent users clicking them. I had trouble figuring out where to specifically put the code; I thought simply saying in the guess function that if the clue sequence was playing, set “button.disabled” to true, & if it was not playing then set “button.disabled” to false. But it was a little more complicated than that. 
-	* I had help from a CodePath TA & a fellow SITE applicant who also tackled this problem; I solved this by approaching it similarly to adding the “lit” class: creating two functions, one for enabling (enableButtons) & one for disabling (disableButtons). I then had to place them in the playClueSequence function. My next minor issue from here was that I was supposed to setTimeout the enableButtons function, rather than the disableButtons function. When I tried to setTimeout the disableButtons function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
+	* I had help from a CodePath TA & a fellow SITE applicant who also tackled this problem; I solved this by approaching it similarly to adding the “lit” class: creating two functions, one for enabling (enableButtons) & one for disabling (disableButtons). I then had to place them in the playClueSequence function.
+		* My next minor issue from here was that I was supposed to setTimeout the enableButtons function, rather than the disableButtons function. When I tried to setTimeout the disableButtons function, it only disabled the one button & the buttons didn’t re-enable again despite putting it into the end of the function.
 
-* My last challenge was the button tone playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more. 
+* My last challenge was the button tone playing if the button was accidentally dragged. It didn’t stop unless I refreshed the page or clicked the button once more.
+	* I solved this by adding an onMouseDrag event to all the buttons, & calling the stopTone function on each one.
 -----------------
 
 3.   What questions about web development do you have after completing your submission? (recommended 100 - 300 words)
@@ -86,7 +88,7 @@ The following **additional** features are implemented:
 
 4.   If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 	
-* I would change the button tones to piano chords simply because it would sound much prettier. I like the piano, that's all (no I can't play haha). I added the audio tags to the buttons, but I couldn't figure out how to add them to the playTone() function in time.
+* I would change the button tones to piano chords simply because it would sound much prettier. I like the piano, that's all (no I can't play haha). I added the audio tags to the buttons, but I couldn't figure out how to add them to the playTone function in time.
 	
 * Adding a seperate sound and/or visual indicator to indicate a wrong answer would be ideal. Since my game is space-themed, I imagine having 3 aliens (instead of Xs) indicating wrong answers. Each wrong answer would turn each alien white; it would be a blank outline otherwise.
 
